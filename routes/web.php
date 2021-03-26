@@ -11,6 +11,36 @@
 |
 */
 
+// routing default
 Route::get('/', function () {
-    return view('upload');
+    return view('welcome');
 });
+
+Route::get('/mahasiswa', function () {
+    echo 'Mahasiswa';
+});
+
+Route::get('/ubg/ilkom/mahasiswa', function () {
+    return 'Mahasiswa Ilkom Kampus UBG';
+});
+
+// routing dengan parameter
+Route::get('/ubg/ilkom/mahasiswa/{semester}/{nim}', function ($semester, $nim) {
+    return 'Mahasiswa Ilkom Kampus UBG Semester : ' . $semester . ' - NIM : ' . $nim;
+});
+
+Route::redirect('/login', '/masuk');
+
+//Group route
+Route::group(['prefix' => '/admin'], function () {
+    Route::get('/mahasiswa', function () {
+        return 'Admin Mahasiswa';
+    });
+    Route::get('/dosen', function () {
+        return 'Admin Dosen';
+    });
+    Route::get('/pegawai', function () {
+        return 'Admin Pegawai';
+    });
+});
+

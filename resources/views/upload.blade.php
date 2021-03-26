@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hello</title>
 </head>
-
 <body>
     <h2>Hello Laravel</h2>
 </body>
