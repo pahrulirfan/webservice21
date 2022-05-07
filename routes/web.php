@@ -58,3 +58,8 @@ Route::get('/kontak/{hp?}', function ($hp) {
 Route::get('/tentang-kami', function () {
     return view('tentang');
 });
+
+//CRUD  Data
+Route::get('customer', 'CustomerController@index');
+Route::get('customer/create', 'CustomerController@create')->name('customer.create');
+Route::post('customer/store', 'CustomerController@store')->name('customer.store');
