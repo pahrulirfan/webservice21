@@ -63,3 +63,7 @@ Route::get('/tentang-kami', function () {
 Route::get('customer', 'CustomerController@index');
 Route::get('customer/create', 'CustomerController@create')->name('customer.create');
 Route::post('customer/store', 'CustomerController@store')->name('customer.store');
+// route model versi laravel 5.8
+Route::delete('customer/{id}', 'CustomerController@destroy')->name('customer.delete');
+// versi diatas 7
+//Route::get('customer', [\App\Http\Controllers\CustomerController::class, 'index']);

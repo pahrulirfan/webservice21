@@ -23,4 +23,10 @@ class CustomerController extends Controller
         Customer::create($request->all());
         return redirect('customer');
     }
+
+    public function destroy(Customer $id)
+    {
+        $id->delete();
+        return redirect('customer');
+    }
 }

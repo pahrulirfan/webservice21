@@ -5,7 +5,7 @@
 @section('isi')
 
     <div class="row mt-4">
-        <div class="col-10">
+        <div class="col-12">
             <div class="card">
                 <div class="card-header">
                     Data Customer
@@ -34,7 +34,15 @@
                                 <td>{{ $customer->phone }}</td>
                                 <td>{{ $customer->email }}</td>
                                 <td>{{ $customer->address }}</td>
-                                <td></td>
+                                <td>
+                                    <form action="{{ route('customer.delete', $customer->id) }}" method="post">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button class="btn btn-sm btn-danger" onclick="return confirm('Anda Yakin ?')">
+                                            <i class="fas fa-trash"></i> Delete
+                                        </button>
+                                    </form>
+                                </td>
                             </tr>
                         @endforeach
                         </tbody>

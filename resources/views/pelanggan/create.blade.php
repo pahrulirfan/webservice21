@@ -5,7 +5,7 @@
 @section('isi')
 
     <div class="row mt-4">
-        <div class="col-6">
+        <div class="col-12">
             <div class="card">
                 <div class="card-header">
                     Create Customer
