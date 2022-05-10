@@ -67,3 +67,6 @@ Route::post('customer/store', 'CustomerController@store')->name('customer.store'
 Route::delete('customer/{id}', 'CustomerController@destroy')->name('customer.delete');
 // versi diatas 7
 //Route::get('customer', [\App\Http\Controllers\CustomerController::class, 'index']);
+
+Route::get('customer/edit/{customer}', 'CustomerController@edit')->name('customer.edit');
+Route::patch('customer/update/{customer}', 'CustomerController@update')->name('customer.update');

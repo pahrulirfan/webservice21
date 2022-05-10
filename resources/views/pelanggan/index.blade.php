@@ -41,6 +41,9 @@
                                         <button class="btn btn-sm btn-danger" onclick="return confirm('Anda Yakin ?')">
                                             <i class="fas fa-trash"></i> Delete
                                         </button>
+                                        <a href="{{ route('customer.edit', $customer->id) }}" class="btn btn-sm btn-warning">
+                                            <i class="fas fa-edit"></i> Edit
+                                        </a>
                                     </form>
                                 </td>
                             </tr>

@@ -29,4 +29,15 @@ class CustomerController extends Controller
         $id->delete();
         return redirect('customer');
     }
+
+    public function edit(Customer $customer)
+    {
+        return view('pelanggan.edit', compact('customer'));
+    }
+
+    public function update(Request $request, Customer $customer)
+    {
+        $customer->update($request->all());
+        return redirect('customer');
+    }
 }
